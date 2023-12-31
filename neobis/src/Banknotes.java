@@ -6,7 +6,7 @@ public class Banknotes {
         int n= sc.nextInt();
         System.out.println(n);
 
-        int[] banknotes={100,50,20,10,5,2};
+        int[] banknotes={100,50,20,10,5,2,1};
         for( int nota:banknotes){
             int num=n/nota;
             n%=nota;
