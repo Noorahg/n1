@@ -1,17 +1,22 @@
 import java.util.Scanner;
 
+
 public class Banknotes {
     public static void main(String[] args) {
-        Scanner sc= new Scanner(System.in);
-        int n= sc.nextInt();
-        System.out.println(n);
+        Scanner scanner = new Scanner(System.in);
 
-        int[] banknotes={100,50,20,10,5,2};
-        for( int nota:banknotes){
-            int num=n/nota;
-            n%=nota;
-            System.out.println(num+"nota(s) de R$ "+ nota + ",00");
+        int value = scanner.nextInt();
+        System.out.println(value);
+
+        int[] notes = {100, 50, 20, 10, 5, 2, 1};
+
+        for (int i = 0; i < notes.length; i++) {
+            int count = value / notes[i];
+            System.out.printf("%d nota(s) de R$ %d,00%n", count, notes[i]);
+            value %= notes[i];
         }
-        sc.close();
+
+        scanner.close();
     }
 }
+
